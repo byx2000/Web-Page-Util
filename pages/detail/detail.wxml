@@ -1,0 +1,52 @@
+<!--网页排行详情页面-->
+
+<import src="../../templates/list.wxml" />
+
+<!--loading提示框-->
+<loading hidden="{{!isLoading}}">
+ 加载中...
+</loading>
+
+<!--标签栏-->
+<scroll-view scroll-x="true" scroll-with-animation="true" class="scroll" scroll-into-view="{{currentTabId}}">
+  <view class="hor">
+    <!--<view wx:for="{{tabs}}" class="wrap">-->
+      <view wx:for="{{tabs}}" class="{{currentTabIndex == index ? 'selected' : 'unselected'}}" hover-class="push" bindtap="onTabClick" id="{{'i' + index}}">{{item}}</view>
+    <!--</view>-->
+  </view>
+</scroll-view>
+
+<!--分隔符-->
+<!--<view class="seperator">
+</view>-->
+
+<!--滑动页面组件-->
+<swiper bindchange="onSwipeChange" current="{{currentTabIndex}}" class="swipe" style="height:{{scrollHeight}}rpx">
+  <view wx:for="{{pages}}">
+    <swiper-item>
+      <scroll-view scroll-y="true" class="ver" style="height:{{scrollHeight}}rpx">
+        <!--网页列表-->
+        <template is="list" data="{{rankList: item.rankList}}" />
+        <!--<view class="list">
+          <view wx:for="{{item.rankList}}">
+            <view class="list_item" bindtap="onWebsiteClick" bindlongpress="onWebsiteLongClick" hover-class="push" data-url="{{item.address}}" data-name="{{item.name}}" data-img="{{item.img}}">
+              <image class="img" src="{{item.img}}"></image>
+              <view class="info">
+                <view class="name"><view class="ellipsis">{{item.name}}</view></view>
+                <view class="addr"><view class="ellipsis">{{item.address}}</view></view>
+              </view>
+            </view>
+          </view>
+        </view>-->
+      </scroll-view>
+    </swiper-item>
+  </view>
+</swiper>
+
+<!--底部弹出菜单-->
+<action-sheet hidden="{{!isMenuPopup}}">
+    <action-sheet-item bindtap="onMenuCopy">复制网址</action-sheet-item>
+    <!--<action-sheet-item bindtap="onMenuOpen">在微信中打开</action-sheet-item>-->
+    <action-sheet-item bindtap="onMenuCollect">收藏</action-sheet-item>
+    <action-sheet-cancel bindtap="onMenuCancel">取消</action-sheet-cancel>
+</action-sheet>

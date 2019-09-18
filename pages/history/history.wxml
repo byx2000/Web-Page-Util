@@ -1,0 +1,16 @@
+<import src="../../templates/list.wxml" />
+
+<loading hidden="{{!isLoading}}">
+ 加载中...
+</loading>
+
+<!--网页列表-->
+<template is="list" data="{{rankList: history}}" />
+
+<!--底部弹出菜单-->
+<action-sheet hidden="{{!isMenuPopup}}">
+    <action-sheet-item bindtap="onMenuCopy">复制网址</action-sheet-item>
+    <!--<action-sheet-item bindtap="onMenuOpen">在微信中打开</action-sheet-item>-->
+    <action-sheet-item bindtap="onMenuCollect">收藏</action-sheet-item>
+    <action-sheet-cancel bindtap="onMenuCancel">取消</action-sheet-cancel>
+</action-sheet>

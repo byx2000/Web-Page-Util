@@ -1,0 +1,13 @@
+<import src="../../templates/input.wxml" />
+
+<loading hidden="{{!isRegisting}}">
+    注册中...
+</loading>
+
+<view class="register">
+  <template is="input" data="{{text: '用户名', onInput: 'onUsername'}}" />
+  <template is="input" data="{{text: '密码', onInput: 'onPassword', isPassword: true}}" />
+  <template is="input" data="{{text: '确认密码', isLast: true, onInput: 'onConfirm', isPassword: true}}" />
+</view>
+
+<button class="register_button" hover-class="register_button_push" bindtap="onRegister">注册</button>

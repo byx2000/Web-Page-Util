@@ -1,0 +1,39 @@
+<!--用户页面-->
+
+<import src="../../templates/input.wxml" />
+
+<loading hidden="{{!isLogining}}">
+    登录中...
+</loading>
+
+<!--未登录界面-->
+<view hidden="{{hasLogin}}" class="unlogin_page">
+
+  <view class="login">
+    <template is="input" data="{{text: '用户名', onInput: 'onUsername'}}" />
+    <template is="input" data="{{text: '密码', isLast: true, onInput: 'onPassword', isPassword: true}}" />
+  </view>
+
+  <button class="login_button" hover-class="login_button_push" bindtap="onLogin">登录</button>
+
+  <button class="register_button" hover-class="register_button_push" bindtap="onRegister">注册</button>
+
+</view>
+
+<!--登录界面-->
+
+<view hidden="{{!hasLogin}}">
+  <!--菜单-->
+  <view class="menu">
+    <view class="menu_item" hover-class="menu_item_push" bindtap="onCollection">
+      <image src="../../images/collection.png" class="img"></image>
+      <view class="menu_text">收藏</view>
+    </view>
+    <view class="menu_item" hover-class="menu_item_push" bindtap="onHistory">
+      <image src="../../images/history.png" class="img"></image>
+      <view class="menu_text">历史</view>
+    </view>
+  </view>
+  <!--退出登录按钮-->
+  <button class="logout_button" hover-class="logout_button_push" bindtap="onLogout">退出登录</button>
+</view>

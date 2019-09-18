@@ -1,0 +1,6 @@
+<template name="input">
+  <view class="item {{isLast ? 'last' : ''}}">
+    <view class="text">{{text}}</view>
+    <view><input class="input" password="{{isPassword}}" bindinput="{{onInput}}"></input></view>
+  </view>
+</template>

@@ -1,0 +1,26 @@
+<import src="../../templates/list.wxml" />
+
+<loading hidden="{{!isLoading}}">
+ 加载中...
+</loading>
+
+<!--网页列表-->
+<template is="list" data="{{rankList: collections}}" />
+
+<!--<view wx:for="{{collections}}">
+  <view class="list_item" bindtap="onWebsiteClick" bindlongpress="onWebsiteLongClick" hover-class="push" data-url="{{item.address}}" data-name="{{item.name}}" data-img="{{item.img}}">
+    <image class="img" src="{{item.img}}"></image>
+    <view class="info">
+      <view class="name"><view class="ellipsis">{{item.name}}</view></view>
+      <view class="addr"><view class="ellipsis">{{item.address}}</view></view>
+    </view>
+  </view>
+</view>-->
+
+<!--底部弹出菜单-->
+<action-sheet hidden="{{!isMenuPopup}}">
+    <action-sheet-item bindtap="onMenuCopy">复制网址</action-sheet-item>
+    <!--<action-sheet-item bindtap="onMenuOpen">在微信中打开</action-sheet-item>-->
+    <action-sheet-item bindtap="onMenuRemove">移除收藏</action-sheet-item>
+    <action-sheet-cancel bindtap="onMenuCancel">取消</action-sheet-cancel>
+</action-sheet>

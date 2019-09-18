@@ -1,0 +1,3 @@
+<!--网页链接页面-->
+
+<web-view src="{{url}}"></web-view>

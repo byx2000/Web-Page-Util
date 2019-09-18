@@ -1,0 +1,63 @@
+@import "../../templates/list.wxss";
+
+page
+{
+  background-color: #f4f4f4;
+}
+
+/*.list_item
+{
+  display: flex;
+  align-items: center;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  background-color: #f0f0f0;
+}
+
+.img
+{
+  width: 200rpx;
+  height: 150rpx;
+}
+
+.info
+{
+  width: 450rpx;
+  height: 150rpx;
+  display: flex;
+  flex-flow: column wrap;
+  padding-left: 15rpx;
+}
+
+.name
+{
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.addr
+{
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  color: grey;
+  font-size: 80%;
+}
+
+.ellipsis
+{
+  width: 450rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.push
+{
+  opacity: 0.9;
+  background: #d0d0d0;
+}*/

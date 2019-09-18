@@ -1,0 +1,24 @@
+.item
+{
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+}
+
+.last
+{
+  border: none;
+}
+
+.text
+{
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  width: 180rpx;
+}
+
+.input
+{
+  height: 100rpx;
+  width: 500rpx;
+}

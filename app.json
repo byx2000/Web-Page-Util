@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/user",
+    "pages/detail/detail",
+    "pages/webpage/webpage",
+    "pages/collection/collection",
+    "pages/register/register",
+    "pages/history/history"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#35353b",
+    "navigationBarTitleText": "网页大全",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "发现",
+        "iconPath": "images/searchIcon.png",
+        "selectedIconPath": "images/searchIcon_selected.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/userIcon.png",
+        "selectedIconPath": "images/userIcon_selected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,135 @@
+@import "../../templates/list.wxss";
+
+page
+{
+  background-color: #f4f4f4;
+}
+
+.scroll
+{
+  width: 720rpx;
+  white-space: nowrap;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  background-color: #f4f4f4;
+}
+
+.hor {
+  display: flex;
+  flex-direction: row;
+  font-size: 35rpx;
+  width: 720rpx;
+}
+
+.wrap
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seperator
+{
+  height: 1rpx;
+  border-bottom: 1rpx solid grey;
+}
+
+.unselected
+{
+  height: 90rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selected
+{
+  height: 90rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #34c632;
+  border-bottom: 5rpx solid #34c632;
+}
+
+.push
+{
+  opacity: 0.9;
+  background: #e0e0e0;
+}
+
+/*隐藏滚动条*/
+::-webkit-scrollbar
+{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+/*.list
+{
+  background-color: white;
+  margin: 30rpx;
+}
+
+.list_item
+{
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  background-color: white;
+  border-bottom: 1rpx solid #f1f1f1;
+}
+
+.img
+{
+  width: 200rpx;
+  height: 150rpx;
+}
+
+.info
+{
+  width: 450rpx;
+  height: 150rpx;
+  display: flex;
+  flex-flow: column wrap;
+  padding-left: 15rpx;
+}
+
+.name
+{
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.addr
+{
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  color: #afafaf;
+  font-size: 80%;
+}
+
+.ellipsis
+{
+  width: 450rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.push
+{
+  opacity: 0.9;
+  background: #d0d0d0;
+}*/

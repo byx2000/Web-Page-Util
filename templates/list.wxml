@@ -1,0 +1,13 @@
+<template name="list">
+  <view class="list">
+    <view wx:for="{{rankList}}">
+      <view class="list_item" bindtap="onWebsiteClick" bindlongpress="onWebsiteLongClick" hover-class="push" data-url="{{item.address}}" data-name="{{item.name}}" data-img="{{item.img}}">
+        <image class="img" src="{{item.img}}"></image>
+        <view class="info">
+          <view class="name"><view class="ellipsis">{{item.name}}</view></view>
+          <view class="addr"><view class="ellipsis">{{item.address}}</view></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

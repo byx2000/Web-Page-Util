@@ -1,0 +1,18 @@
+<!--发现页面-->
+
+<!--loading提示框-->
+<loading hidden="{{!isLoading}}">
+ 加载中...
+</loading>
+
+<!--一级分类列表-->
+<view class="list">
+  <!--<view class="desc">一级分类</view>-->
+  <view wx:for="{{array}}" wx:key="name">
+    <view id="{{item.name}}" class="list_item" hover-class="push" bindtap="onClick">
+      <image src="{{item.iconSrc}}" class="icon" style="background-color: {{item.color}}"></image>
+      <text class="text">{{item.name}}</text>
+    </view>
+  </view>
+</view>
+

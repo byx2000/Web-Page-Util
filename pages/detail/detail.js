@@ -162,10 +162,10 @@ Page({
     onWebsiteClick: function (event)
     {
       //获取当前选中网页名称和网址
-      /*var data = { url: event.currentTarget.dataset.url, name: event.currentTarget.dataset.name };
+      var data = { url: event.currentTarget.dataset.url, name: event.currentTarget.dataset.name };
       
       //打开网址
-      wx.navigateTo({
+      /*wx.navigateTo({
         url: "../webpage/webpage?data=" + JSON.stringify(data)
       });*/
 
@@ -185,7 +185,15 @@ Page({
         app.addHistory(app.globalData.currentUser.username, 
           event.currentTarget.dataset.name,
           event.currentTarget.dataset.url,
-          event.currentTarget.dataset.img);
+          event.currentTarget.dataset.img,
+          function (res)
+          {
+
+          },
+          function (err)
+          {
+            console.log(err);
+          });
       }
     },
 

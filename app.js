@@ -334,7 +334,7 @@ App({
     var env = this;
 
     //初始化bmob
-    this.globalData.Bmob.initialize("361185e4535950187f99552651e76475", "6c01d615ea2a0be87426118464146835");
+    this.globalData.Bmob.initialize("361185e4535950187f99552651e76475", "6c01d615ea2a0be87426118464146835", "a3cd7ad9f2c35929d7e0a32aca43138d");
 
     //获取当前用户
     this.globalData.currentUser = this.getCurrentUser();
